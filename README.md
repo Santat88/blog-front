@@ -1,24 +1,29 @@
-# blog-front
+# Тестовый проект blog-front на vue. Задание группа 2-МГВ-2 Ганичев А.
 
-## Project setup
+## Настройка проекта
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Компиляция и горячая перезагрузка для разработки
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Компиляция и минимизация для продакшена
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### Линтинг и исправление файлов
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Настройка конфигурации
+См. [Справочник по конфигурации](https://cli.vuejs.org/config/).
+
+---
+
+### Связанная документация
+Для бэкенд-API см. [README FastAPI](../path-to-fastapi/README.md).
