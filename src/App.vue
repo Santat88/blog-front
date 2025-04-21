@@ -1,26 +1,36 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <PostList :posts="posts" />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PostList from './components/PostList.vue'
+import axios from 'axios';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    PostList
+  },
+  data() {
+    return {
+      posts: [
+      ]
+    }
+  },
+  created() {
+    this.fetchPosts();
+  },
+  methods: {
+    async fetchPosts() {
+      try {
+        const response = await axios.get('http://localhost:8088/api/v1/posts');
+        this.posts = response.data;
+      } catch (error) {
+        console.error('Error fetching posts:', error);
+      }
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
