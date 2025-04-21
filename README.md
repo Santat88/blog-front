@@ -26,4 +26,4 @@ npm run lint
 ---
 
 ### Связанная документация
-Для бэкенд-API см. [README FastAPI](../path-to-fastapi/README.md).
+Для бэкенд-API см. [README FastAPI](./fastapi-app/README.md).
