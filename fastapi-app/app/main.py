@@ -33,8 +33,11 @@ async def lifespan(app: FastAPI):
         print(f"Существующие записи: {existing_posts}")
         if not existing_posts:  # Если таблица пуста
             conn.execute(posts.insert(), [
-                {"id": 1, "title": "First Post", "content": "This is the content of the first post."},
-                {"id": 2, "title": "Second Post", "content": "This is the content of the second post."},
+                {"id": 1, "title": "Первый пост", "content": "Это содержимое первого поста. Добро пожаловать в наш блог!"},
+                {"id": 2, "title": "Второй пост", "content": "Это содержимое второго поста. Здесь мы делимся интересными фактами."},
+                {"id": 3, "title": "Третий пост", "content": "Это содержимое третьего поста. Следите за нашими обновлениями!"},
+                {"id": 4, "title": "Четвертый пост", "content": "Это содержимое четвертого поста. Мы рады вашим комментариям!"},
+                {"id": 5, "title": "Пятый пост", "content": "Это содержимое пятого поста. Спасибо, что читаете наш блог!"},
             ])
             conn.commit()
             print("Данные добавлены")
